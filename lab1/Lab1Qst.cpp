@@ -57,16 +57,17 @@ l=length(h);
     }
 }
 void comp(char *s,char *k){
-if(s==k){
-    cout<<"both string are equal";
-}
-else{
-    if(s>k){
+    int i;
+    for(i = 0; s[i] == k[i] && s[i]!= '\0'; i++);
+
+    if(s[i]>k[i]){
     cout<<"string 1 is greater than string 2";
 }
-if(s<k){
+else if(s[i]<k[i]){
       cout<<"string 2 is greater than string 1";
 }
+        else{
+    cout<<"both string are equal";
 }
 }
 void cat(char *s,char *k){
