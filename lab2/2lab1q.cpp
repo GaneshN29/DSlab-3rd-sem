@@ -26,7 +26,7 @@ int  a[n];
     if(top==-1){cout<<"Empty Stack\n";return;}
     else{
     cout<< "Contents of stack\n";
-    for(i=0;i<=top;i++)
+    for(i=0;i<top;i++)
         cout<<a[i]<<" ";}
     }
 };
