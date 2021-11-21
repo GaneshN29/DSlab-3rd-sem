@@ -23,7 +23,9 @@ int  a[n];
     }
     void display(){
     int i;
-    if(top==-1){cout<<"Empty Stack\n";return;}
+    if(top==0)
+{
+cout<<"Empty Stack\n";return;}
     else{
     cout<< "Contents of stack\n";
     for(i=0;i<top;i++)
@@ -35,7 +37,7 @@ stack s;
 s.push(4);
 s.push(5);
 s.push(7);
-s.push(8);
+s.push(7);
 cout<<s.pop()<<"\n";
 s.display();
 }
