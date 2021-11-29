@@ -14,7 +14,7 @@ cin>>e>>n>>nonZ;
 a[0][0]=e;
 a[0][1]=n;
 a[0][2]=nonZ;
-cout<<"Enter the value of row,column,value of non-zero Element:\n";
+cout<<"Enter the value of row,column and non-zero Element:\n";
 for(i=1; i<m; i++){
   for(j=0; j<3; j++){
     cin>>a[i][j];
