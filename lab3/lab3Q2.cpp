@@ -24,38 +24,35 @@ class Sparse{
             for(int i=1;i<c;i++){
                 start[i]=start[i-1]+frequency[i-1];
             }
-            for(int i=0;i<=v;i++){
-                int j=start[a[i].column]+1;
-                b[j++].set(a[i].column,a[i].row,a[i].value);
+            for(int i=1;i<=v;i++){
+                int j=start[a[i].column]++;
+                b[j].set(a[i].column,a[i].row,a[i].value);
             }
         }
     }
     void display(){
-        cout<<row<<' '<<column<<' '<<value<<" "<<endl;
+        cout<<row<<" "<<column<<" "<<value<<"\n";
     }
-
 };
-
-
 int main(){
     //Accepting the input in the Square Matrix form
     int m,n;
-    cout<<"Enter the size of the matrix:"<<endl;
+    cout<<"Enter the size of the matrix:\n";
     cin>>m>>n;
     int arr[m][n];
-    int count=0;
+    int coun=0;
     for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
             cout<<"Enter ["<<i<<"]["<<j<<"]:";
             cin>>arr[i][j];
             if(arr[i][j]!=0)
-                count++;
+                coun++;
         }
     }
 
     //Developing a sparse matrix
-    Sparse s[count+1];
-    s[0].set(m,n,count);
+    Sparse s[coun+1];
+    s[0].set(m,n,coun);
     int k=0;
     for(int i=0;i<m;i++){
         for(int j=0;j<n;j++){
@@ -66,15 +63,15 @@ int main(){
     }
 
     //Original Matrix
-    cout<<"Matrix before Transposing"<<endl;
-    for(int k=0;k<=count;k++){
+    cout<<"Matrix before Transposing\n";
+    for(int k=0;k<=coun;k++){
         s[k].display();
     }
 
-    Sparse b[count+1], temp;
-    cout<<"Matrix after Transposing"<<endl;
+    Sparse b[coun+1],temp;
+    cout<<"Matrix after Transposing\n";
     temp.FTranspose(s,b);
-    for(int k=0;k<=count;k++){
+    for(int k=0;k<=coun;k++){
         b[k].display();
     }
 }
