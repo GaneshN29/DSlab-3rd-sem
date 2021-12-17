@@ -193,10 +193,6 @@ int main(){
     //MENU DRIVEN PROGRAM TO IMPLEMENT THE OPERATIONS
     int choice;
     int loc,elem;
-    L.append(100);
-    L.append(2100);
-    L.append(10);
-    L.append(1420);
     cout<<"THE FOLLOWING OPERATIONS CAN BE PERFORMED ON THE LINKED LIST:"<<endl;
     cout<<"1.Insert before another element"<<endl;
     cout<<"2.Insert after another element"<<endl;
